@@ -36,7 +36,7 @@ const FormSignup = () => {
               <option value="scripting">Scripting</option>
               </select>
             </div>
-            <div  className="fr-form-group fc-form-group-full">
+            <div  className="fr-form-group fr-form-group-full">
               <button 
                       id="btnSubmit" 
                       type="submit"  
