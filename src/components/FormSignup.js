@@ -59,15 +59,6 @@ const FormSignup = ({ submitForm }) => {
       </div>
     </section> 
 
-
-
-
-       
-       
-
-
-
-    
      
   )
 }
