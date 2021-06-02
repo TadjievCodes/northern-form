@@ -1,0 +1,14 @@
+/* BASE ------------------------------------------------- */
+
+@import 'variables', 'typography', 'reset', 'flex', 'scaffolding', 'form';
+
+
+@-ms-viewport{
+  width: device-width;
+}
+
+.center {
+  text-align: center;
+}
+
+
