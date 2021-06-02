@@ -1,34 +1,45 @@
 import React from 'react'
 import '../scss/main.scss'
+import validate from './ValidateInfo';
+import useForm from './UseForm'
 
-const FormSignup = () => {
-  return (
-       
+const FormSignup = ({ submitForm }) => {
+  const { handleChange, handleSubmit, values, errors } = useForm(
+    submitForm,
+    validate
+  );
+
+  return ( 
        <section id="internship_signup" className="fr-internship-signup"> 
-          <div class="fr-internship-signup-container">
+          <div className="fr-internship-signup-container">
             <h1 className="fr-heading-flair">Internship signup form</h1>
               <div className="fr-internship-copy">
                   <p>Prepare for your career with a project Management, Web-Development, Graphic design, or Digital Marketing Internship at Northern.</p>
               </div>
         
          
-        <form id="intern_form">
+        <form id="intern_form" onSubmit={handleSubmit} noValidate>
           <div className="fr-form-container flex flex-row flex-wrap flex-space-between">
             <div className="fr-form-group fr-form-group-half">
               <input 
                    id="email" 
                    name="email" 
                    type="email" 
-                   placeholder="Your Email Address*" 
+                   placeholder="Your Email Address*"
+                   value={values.email}
+                   onChange={handleChange} 
               />
+              {errors.email && <p className="fr-error-msg">{errors.email}</p>}
             </div>
             <div className="fr-form-group fr-form-group-half">
               <select 
                     id="interests" 
                     name="interests" 
                     required
+                    value={values.interests}
+                    onChange={handleChange}
               >
-              <option value="" disabled selected hidden>Your Interests</option>
+              <option value="" disabled defaultValue hidden>Your Interests</option>
               <option value="development">Development</option>
               <option value="design">Design</option>
               <option value="management">Management</option>
