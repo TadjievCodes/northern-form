@@ -1,3 +1,4 @@
+
 export default function validateInfo(values) {
   
   let error = false;
@@ -12,14 +13,19 @@ if (!values.email || !pattern.test(values.email) ) {
     errors.email = 'Please enter a valid email address.';
 
     error  = true; 
+     
 
 
   } 
       
+      
+
+
   
   if(error === false) {
    // If error is not successfull then the form success will appear and the data on the console of the browser as an object
-  
+   
+
   // I get the values for email and interests input boxes and store them in an object
     const getValues = () => {
     return {
@@ -37,4 +43,4 @@ if (!values.email || !pattern.test(values.email) ) {
 
 }
 
-// if email valid and form is submitted log the value of each field in browser console without refreshing the page?
+// if email valid and form is submitted log the value of each field in browser console without refreshing the page

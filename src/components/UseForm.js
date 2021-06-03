@@ -33,7 +33,7 @@ const useForm = (callback, validate) => {
         callback();
       }
     },
-    [errors]
+    [errors, isSubmitting, callback]
   );
 
 
