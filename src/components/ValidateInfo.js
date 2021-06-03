@@ -29,8 +29,8 @@ if (!values.email || !pattern.test(values.email) ) {
   // I get the values for email and interests input boxes and store them in an object
     const getValues = () => {
     return {
-        first: values.email,
-        second: values.interests,
+        email: values.email,
+        interest: values.interests,
     };
 }
      // To access them using ES6 method but useless here as console.log gets the values already
