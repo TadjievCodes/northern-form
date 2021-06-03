@@ -34,7 +34,7 @@ if (!values.email || !pattern.test(values.email) ) {
     };
 }
      // To access them using ES6 method but useless here as console.log gets the values already
-     //const {first, second} = getValues();
+     //const {email, interest} = getValues();
     console.log(getValues());
 
   }
