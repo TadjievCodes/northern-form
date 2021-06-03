@@ -10,7 +10,7 @@ const FormSignup = ({ submitForm }) => {
   );
 
   return ( 
-       <section id="internship_signup" className="fr-internship-signup"> 
+       <section id="internship-signup" className="fr-internship-signup"> 
           <div className="fr-internship-signup-container">
             <h1 className="fr-heading-flair">Internship signup form</h1>
               <div className="fr-internship-copy">
