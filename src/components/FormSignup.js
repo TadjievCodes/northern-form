@@ -3,7 +3,7 @@ import '../scss/main.scss'
 import validate from './ValidateInfo';
 import useForm from './UseForm'
 
-const FormSignup = ({ submitForm }) => {
+const FormSignup = ({ submitForm, isLoaded }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
     validate
@@ -48,11 +48,17 @@ const FormSignup = ({ submitForm }) => {
               </select>
             </div>
             <div  className="fr-form-group fr-form-group-full">
+
               <button 
-                      id="btnSubmit" 
-                      type="submit"  
-                      className="fr-base-btn fr-red-btn"
-              >Sign Up Now <span  className="fr-arrow-icon-right"></span></button>
+                id="btnSubmit" 
+                type="submit"  
+                className="fr-base-btn fr-red-btn"
+              >
+
+              {!isLoaded ? (<div>Sign Up Now <span  className="fr-arrow-icon-right"></span></div>
+              ) : (<div>Submitting <div class='fr-ellipsis'><div></div><div></div><div></div><div></div></div></div>)
+              }
+              </button>
             </div>
           </div>
         </form>
