@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import FormSignup from './FormSignup'
 import FormSuccess from './FormSuccess';
 import '../scss/main.scss';

@@ -56,7 +56,7 @@ const FormSignup = ({ submitForm, isLoaded }) => {
               >
 
               {!isLoaded ? (<div>Sign Up Now <span  className="fr-arrow-icon-right"></span></div>
-              ) : (<div>Submitting <div class='fr-ellipsis'><div></div><div></div><div></div><div></div></div></div>)
+              ) : (<div>Submitting <div className='fr-ellipsis'><div></div><div></div><div></div><div></div></div></div>)
               }
               </button>
             </div>
