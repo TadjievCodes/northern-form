@@ -6,10 +6,13 @@ export default function validateInfo(values) {
 
   let pattern = /\S+@\S+\.\S+/;
   
+// if the vale of email or the value of email doesn't match the pattern throw an error with a red border and a message to enter their email
+
 if (!values.email || !pattern.test(values.email) ) {
     
     document.getElementById("email").classList.add("fr-error");
-
+   
+   // errors.email's message gets passed to FormSignup.js inside the form 
     errors.email = 'Please enter a valid email address.';
 
     error  = true; 
@@ -19,8 +22,6 @@ if (!values.email || !pattern.test(values.email) ) {
   } 
       
       
-
-
   
   if(error === false) {
    // If error is not successfull then the form success will appear and the data on the console of the browser as an object
