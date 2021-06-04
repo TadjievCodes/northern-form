@@ -1,6 +1,6 @@
 /* Form part ------------------------------------------------- */
 
-@import 'variables', 'typography', 'reset', 'flex', 'scaffolding';
+@import 'variables', 'typography', 'reset', 'flex', 'scaffolding', 'mixins';
 
 .fr-error {
   border: 3px solid $fr-red !important;
@@ -20,7 +20,7 @@ input {
   &[type="email"],
   &[type="tel"],
   &[type="password"] {
-    width: 100%;
+    @include width-rule;
     border-radius: 0;
     font-family: $main-fontStyle;
     font-style: italic;
@@ -50,8 +50,8 @@ select {
   border: 4px solid $white;
   border-radius: 0;
   outline: 0;
-  width: 100%;
-  padding: 18px;
+  @include width-rule;
+  padding: 17px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -72,19 +72,11 @@ select {
 }
 
 .fr-base-btn {
-  width: auto;
-  padding: 18px;
-  display: inline-block;
-  text-transform: capitalize;
-  cursor: pointer;
-  transition: all .4s;
-  position: relative;
-  vertical-align: middle;
-  border: 0;
+  @include base-button;
 }
 
 .fr-red-btn {
-  width: 100%;
+  @include width-rule;
   background-color: $fr-red;
   font-family: $main-fontStyle;
   font-weight: 700;

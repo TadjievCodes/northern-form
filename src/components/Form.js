@@ -12,7 +12,8 @@ const Form = () => {
   function submitForm() {
 
     setIsLoaded(true);
-
+    // Every 2 seconds, setTimeout method makes the magic button ellipsis work but main true false logic
+    // happens in FormSignup.js where I use the state of isLoaded
     setTimeout( () => setIsSubmitted(true), 2000);
   }
 
