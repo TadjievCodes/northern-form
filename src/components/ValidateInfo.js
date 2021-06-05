@@ -1,6 +1,6 @@
 
 export default function validateInfo(values) {
-  
+ // validations here 
   let error = false;
   let errors = {};
   let pattern = /\S+@\S+\.\S+/;
@@ -23,6 +23,7 @@ if (!values.email || !pattern.test(values.email) ) {
   if(error === false) {
    // If error is not successfull then the form success will appear and the data on the console of the browser as an object
    // But when it takes us to another component of AlreadySubmitted then we cannot see the values of  the Object
+  // To be directed to the component of AlreadySubmitted you need to refresh the page on FormSucess component or Thank you page
 
   // I get the values for email and interests input boxes and store them in an object
     const getValues = () => {
@@ -36,7 +37,10 @@ if (!values.email || !pattern.test(values.email) ) {
 }
      // To access them using ES6 method but useless here as console.log gets the values already
      //const {email, interest} = getValues();
+     // To show the input data on the console
+     // Note that when you're in AlreadySubmitted component, you cannot see these input values on the browser console
       console.log(getValues());
+
     // Insert the email input data into localStorage for further validation in order not to allow another submission while refreshing the page
       localStorage.setItem("recentEmail", values.email);
       
@@ -46,4 +50,5 @@ if (!values.email || !pattern.test(values.email) ) {
 
 }
 
-// if email valid and form is submitted log the value of each field in browser console without refreshing the page
+ // When you clear the localStorage with localStorage.clear() on the console, then you can refresh and go back to the main form again
+

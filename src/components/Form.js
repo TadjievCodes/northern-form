@@ -8,7 +8,7 @@ const Form = () => {
  const [isSubmitted, setIsSubmitted] = useState(false);
  const [isLoaded, setIsLoaded] = useState(false);
 
-
+// function that gets isSubmitted and isLoaded states into true to go ahead
   function submitForm() {
 
     setIsLoaded(true);
@@ -22,6 +22,10 @@ const Form = () => {
   return (
   <>
     <div className='form-container'>
+
+    {/* Using a ternary operator here and in some other parts instead of if else to have cleaner code 
+     If submitted not true then form sing up page else form success page or component*/}
+    
     {!isSubmitted ? (
       <FormSignup submitForm={submitForm} isLoaded={isLoaded} />
       ) : (

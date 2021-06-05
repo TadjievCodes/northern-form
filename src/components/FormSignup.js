@@ -4,6 +4,7 @@ import validate from './ValidateInfo';
 import useForm from './UseForm'
 
 const FormSignup = ({ submitForm, isLoaded }) => {
+// Destructuring the values here
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
     validate
@@ -29,6 +30,7 @@ const FormSignup = ({ submitForm, isLoaded }) => {
                    value={values.email}
                    onChange={handleChange} 
               />
+              {/* If the erros.email returns true or has an error then add the message from errors.email and className to style it */}
               {errors.email && <p className="fr-error-msg">{errors.email}</p>}
             </div>
             <div className="fr-form-group fr-form-group-half">
