@@ -55,7 +55,7 @@ const FormSignup = ({ submitForm, isLoaded }) => {
                 className="fr-base-btn fr-red-btn"
               >
 
-             {/* As mentioned earlier the main logic here, if isLoaded not true, Sign up Now button else it changes to Submitting */}
+             {/* As mentioned earlier the main logic here, if isLoaded not true, Sign up Now button else it changes to Submitting ellipsis */}
 
               {!isLoaded ? (<div>Sign Up Now <span  className="fr-arrow-icon-right"></span></div>
               ) : (<div>Submitting <div className='fr-ellipsis'><div></div><div></div><div></div><div></div></div></div>)

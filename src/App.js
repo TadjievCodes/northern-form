@@ -1,9 +1,13 @@
+import AlreadySubmitted from './components/AlreadySubmitted';
 import Form from './components/Form';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      { localStorage.getItem('recentEmail') ? (
+        <AlreadySubmitted />) :  
+      (<Form />)
+    }
     </div>
   );
 }
