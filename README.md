@@ -30,7 +30,7 @@
 8) As mentioned earlier the main logic here, if isLoaded component not true, Sign up Now button else it changes to Submitting ellipsis.
 9) Every 2 seconds, setTimeout method makes the magic button ellipsis work but main true false logic.
     // happens in FormSignup.js where I use the state of isLoaded
-10) Using a ternary operator while retruning the form or displaying it and in some other parts instead of if else to have cleaner code. 
+10) Using a ternary operator while returning the form or displaying it and in some other parts instead of if else to have cleaner code. 
      If submitted not true then form sing up page else form success page or success page component.
 11) Implemented cross browser compatibility including mobile browsers and IE Browser support
 12) Hosting done with Firebase
