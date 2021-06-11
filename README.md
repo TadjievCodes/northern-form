@@ -1,10 +1,18 @@
 # Northern Form Coding Challenge with React and Sass
 
+# Main form to be displayed when the page is loaded
+
 ![](images/form.png)     
+
+# Errors to be displayed if validation doesn't submit the form
 
 ![](images/error.png)
 
+# Thank you page to be displayed
+
 ![](images/thankYou.png)
+
+# Already Submitted page with localStorage if user tries to submit the form again
 
 ![](images/alreadySubmitted.png)
 
